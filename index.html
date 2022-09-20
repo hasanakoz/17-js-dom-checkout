@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Checkout Form</title>
+  </head>
+  <body>
+    <header>
+      <h2>Checkout</h2>
+    </header>
+    <!-- <form action="#"> -->
+    <div class="container">
+      <div class="form-info">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="email">
+            <label for="email">Email</label> <br />
+            <input
+              type="email"
+              name="email_entered"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="phone">
+            <label for="phone">Phone</label>
+            <br />
+            <input
+              type="tel"
+              name="entered-tel"
+              id="tel"
+              placeholder="Enter your phone"
+              required
+            />
+          </div>
+        </div>
+        <div class="shipping">
+          <h3>Shipping Address</h3>
+          <div class="fullname">
+            <label for="name">Full name</label>
+            <br />
+            <input
+              type="text"
+              name="name_entered"
+              id="name"
+              placeholder="Enter your Full name"
+              required
+            />
+          </div>
+          <div class="address">
+            <label for="address">Adress</label>
+            <br />
+            <input
+              type="text"
+              name="entered-address"
+              id="address"
+              placeholder="Enter your address"
+              required
+            />
+          </div>
+          <div class="city">
+            <label for="city">City</label>
+            <br />
+            <input
+              type="text"
+              name="entered-city"
+              id="city"
+              placeholder="Enter your city"
+              required
+            />
+          </div>
+
+          <div class="country-code">
+            <div class="country">
+              <label for="country">Country</label> <br />
+              <select name="country" id="country" required>
+                <option value="Turkey">Turkey</option>
+                <option value="USA">USA</option>
+                <option value="Spain">Spain</option>
+              </select>
+            </div>
+            <div class="postal">
+              <label for="postal-code">Postal Code</label>
+              <br />
+              <input
+                type="text"
+                name="postal-code"
+                id="postal-code"
+                placeholder="Enter your postal code"
+                required
+              />
+            </div>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="see-next" id="see-next" />
+            <label for="see-next">See this information next time</label>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="bag">
+          <img src="./IMG/photo1.png" alt="" />
+
+          <div class="bag-costs">
+            <h4>Vintage Backbag</h4>
+            <p>
+              $
+              <span class="daily-price" id="bag-price">54.99</span>
+              <del>$94.99</del>
+            </p>
+            <div class="buttons">
+              <i class="fa-solid fa-minus"></i>
+              <p class="quanty">1</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <button class="remove">Remove</button>
+            <p class="product-total">
+              Product Total: <span class="product-total-span"></span>
+            </p>
+          </div>
+        </div>
+        <div class="shoes">
+          <img src="./IMG/photo2.png" alt="" />
+          <div class="shoe-costs">
+            <h4>Levi Shoes</h4>
+            <p>
+              $<span class="daily-price" id="shoe-price">74.99</span>
+              <del>$124.99</del>
+            </p>
+            <div class="buttons">
+              <i class="fa-solid fa-minus"></i>
+              <p class="quanty">1</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <button class="remove">Remove</button>
+            <p class="product-total">
+              Product Total: <span class="product-total-span"></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="clock">
+          <img src="./IMG/photo3.jpg" alt="" />
+
+          <div class="clock-costs">
+            <h4>Antique Clock</h4>
+            <p>
+              $<span class="daily-price" id="clock-price">74.99</span>
+              <del>$94.99</del>
+            </p>
+            <div class="buttons">
+              <i class="fa-solid fa-minus"></i>
+              <p class="quanty">1</p>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <button class="remove">Remove</button>
+            <p class="product-total">
+              Product Total: <span class="product-total-span"></span>
+            </p>
+          </div>
+        </div>
+
+        <hr />
+        <div class="subtotal">
+          <p>Subtotal</p>
+          <p id="subtotal"></p>
+        </div>
+        <hr />
+        <div class="tax">
+          <p>Tax %18</p>
+          <p id="tax"></p>
+        </div>
+        <hr />
+        <div class="shipping-cost">
+          <p>Shipping</p>
+          <p id="shipping"></p>
+        </div>
+        <hr />
+
+        <div class="total-cost">
+          <p>Total</p>
+          <p id="total">10</p>
+        </div>
+      </div>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Continue" />
+    </div>
+    <!-- </form> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
